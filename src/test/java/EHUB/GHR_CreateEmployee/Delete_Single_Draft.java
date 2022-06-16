@@ -46,4 +46,5 @@ public class Delete_Single_Draft extends BaseClass {
 		Assert.assertEquals(popup, "Deleted successfully");
 		driver.close();
 	}
+	
 }

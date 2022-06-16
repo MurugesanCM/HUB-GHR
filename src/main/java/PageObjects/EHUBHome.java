@@ -165,4 +165,12 @@ public WebElement addSection() {
 	// TODO Auto-generated method stub
 	return driver.findElement(By.xpath(prop.getProperty("addSectionBtn")));
 }
+public WebElement clickOnClearAll() {
+	// TODO Auto-generated method stub
+	return driver.findElement(By.xpath(prop.getProperty("ResetSelectedDrafts")));
+}
+public WebElement deselectSelectedDraft(String DraftName)
+{
+	return driver.findElement(By.xpath("//span[.='"+DraftName+"']//parent::div//span[.='×']"));
+}
 }
