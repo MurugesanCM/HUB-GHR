@@ -34,10 +34,13 @@ public class DeleteDraft extends BaseClass {
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
 		hubhome.ClickOnForm("HIRE").click();
+		//Click on delete draft from the popup window
 		hubhome.deleteDraft().click();
+		//select the drafts to delete
 		hubhome.clickonselectDrafts().click();
 		hubhome.selectValueFromFilter("Test Draft1").click();
 		hubhome.clickOnTickButton("TickButtondeleteDraft").click();
+	//capture the popup and evaluate
 		String popup = neosuite.popUp().getText();
 		Assert.assertEquals(popup, "Deleted successfully");
 		driver.close();
