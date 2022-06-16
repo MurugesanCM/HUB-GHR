@@ -37,7 +37,8 @@ public class Delete_Single_Draft extends BaseClass {
 		//Click on delete draft from the popup window
 		hubhome.deleteDraft().click();
 		//select the drafts to delete
-		hubhome.clickonselectDrafts(2).click();
+		int noOfDrafts = 1;
+		hubhome.clickonselectDrafts(noOfDrafts).click();
 		hubhome.selectValueFromFilter("Test Draft1").click();
 		hubhome.clickOnTickButton("TickButtondeleteDraft").click();
 	    //capture the popup and evaluate

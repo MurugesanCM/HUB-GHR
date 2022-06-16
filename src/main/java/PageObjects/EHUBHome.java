@@ -135,7 +135,7 @@ public WebElement deleteDraft()
 }
 public WebElement clickonselectDrafts(int i) {
 	// TODO Auto-generated method stub
-	return driver.findElement(By.xpath("//*[@id=\"deleteDraftModal\"]/div[2]/div/div/ng-select/div/div/div["+i+"]/input"));
+	return driver.findElement(By.xpath("//*[@id=\"deleteDraftModal\"]/div[2]/div/div/ng-select/div/div/div["+(i+1)+"]/input"));
 }
 public WebElement CreateNewDraft()
 {

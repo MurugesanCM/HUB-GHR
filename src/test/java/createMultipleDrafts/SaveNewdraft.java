@@ -70,7 +70,8 @@ public class SaveNewdraft extends BaseClass {
 	    String popup = neosuite.popUp().getText();
 	    Assert.assertEquals(popup, "Draft Saved");
 	    wait.until(ExpectedConditions.invisibilityOf(neosuite.popUp()));
+		}
 	    driver.close();
-			}
+	
 	}
 }

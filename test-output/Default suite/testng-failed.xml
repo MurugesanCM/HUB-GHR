@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts">
+      <class name="createMultipleDrafts.SaveNewdraft">
         <methods>
-          <include name="saveDraft"/>
+          <include name="saveNewDraft"/>
         </methods>
-      </class> <!-- EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts -->
+      </class> <!-- createMultipleDrafts.SaveNewdraft -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
