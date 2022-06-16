@@ -133,9 +133,9 @@ public WebElement deleteDraft()
 {
 	return driver.findElement(By.xpath("//span[.='Delete Drafts']"));
 }
-public WebElement clickonselectDrafts() {
+public WebElement clickonselectDrafts(int i) {
 	// TODO Auto-generated method stub
-	return driver.findElement(By.xpath(prop.getProperty("selectDraft(deleteDrafts)")));
+	return driver.findElement(By.xpath("//*[@id=\"deleteDraftModal\"]/div[2]/div/div/ng-select/div/div/div["+i+"]/input"));
 }
 public WebElement CreateNewDraft()
 {

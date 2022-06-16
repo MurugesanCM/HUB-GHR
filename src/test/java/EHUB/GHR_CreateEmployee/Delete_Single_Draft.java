@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import Resources.BaseClass;
 
-public class DeleteDraft extends BaseClass {
+public class Delete_Single_Draft extends BaseClass {
 
 	public WebDriver driver;
 
@@ -37,7 +37,7 @@ public class DeleteDraft extends BaseClass {
 		//Click on delete draft from the popup window
 		hubhome.deleteDraft().click();
 		//select the drafts to delete
-		hubhome.clickonselectDrafts().click();
+		hubhome.clickonselectDrafts(2).click();
 		hubhome.selectValueFromFilter("Test Draft1").click();
 		hubhome.clickOnTickButton("TickButtondeleteDraft").click();
 	    //capture the popup and evaluate
