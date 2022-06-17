@@ -10,8 +10,7 @@ import org.testng.annotations.Test;
 
 import Resources.BaseClass;
 
-public class Delete_Single_Draft extends BaseClass {
-
+public class DeleteDraftCloseBtn extends BaseClass {
 	public WebDriver driver;
 
 	@Test
@@ -34,17 +33,12 @@ public class Delete_Single_Draft extends BaseClass {
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
 		hubhome.ClickOnForm("HIRE").click();
-		//Click on delete draft from the popup window
+		wait.until(ExpectedConditions.visibilityOf(hubhome.deleteDraft()));
+		//Click on delete draft from the pop up window
 		hubhome.deleteDraft().click();
-		//select the drafts to delete
-		int noOfDrafts = 1;
-		hubhome.clickonselectDrafts(noOfDrafts).click();
-		hubhome.selectValueFromFilter("Test Draft1").click();
-		hubhome.clickOnTickButton("TickButtondeleteDraft").click();
-	    //capture the popup and evaluate
-		String popup = neosuite.popUp().getText();
-		Assert.assertEquals(popup, "Deleted successfully");
+		wait.until(ExpectedConditions.visibilityOf(hubhome.closedraftpopup("deleteDraftModal")));
+		hubhome.closedraftpopup("deleteDraftModal").click();
+		Assert.assertTrue(hubhome.closedraftpopup("draftViewModal").isDisplayed(),"Close Btn in deletedraft window is not working");
 		driver.close();
-	}
-	
+}
 }

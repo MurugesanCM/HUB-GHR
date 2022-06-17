@@ -173,4 +173,8 @@ public WebElement deselectSelectedDraft(String DraftName)
 {
 	return driver.findElement(By.xpath("//span[.='"+DraftName+"']//parent::div//span[.='×']"));
 }
+public WebElement closedraftpopup(String draftwindowtype)
+{
+	return driver.findElement(By.xpath("//div[@id='"+draftwindowtype+"']//i[@id='closeModalIcon']"));
+}
 }

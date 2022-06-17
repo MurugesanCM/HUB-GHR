@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import Resources.BaseClass;
 
-public class Delete_Single_Draft extends BaseClass {
+public class Delete_Draft_WithoutSelectingAnyDraft extends BaseClass {
 
 	public WebDriver driver;
 
@@ -37,13 +37,10 @@ public class Delete_Single_Draft extends BaseClass {
 		//Click on delete draft from the popup window
 		hubhome.deleteDraft().click();
 		//select the drafts to delete
-		int noOfDrafts = 1;
-		hubhome.clickonselectDrafts(noOfDrafts).click();
-		hubhome.selectValueFromFilter("Test Draft1").click();
 		hubhome.clickOnTickButton("TickButtondeleteDraft").click();
 	    //capture the popup and evaluate
 		String popup = neosuite.popUp().getText();
-		Assert.assertEquals(popup, "Deleted successfully");
+		Assert.assertEquals(popup, "Select Drafts for Deletion","Test Case Failed-Wrong popup when we delete without selecting any drafts");
 		driver.close();
 	}
 	
