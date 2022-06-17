@@ -1,21 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-16T17:47:56 IST" name="Default suite" finished-at="2022-06-16T17:48:43 IST" duration-ms="47497">
+  <suite started-at="2022-06-17T11:10:13 IST" name="Suite" finished-at="2022-06-17T11:18:56 IST" duration-ms="523466">
     <groups>
     </groups>
-    <test started-at="2022-06-16T17:47:56 IST" name="Default test" finished-at="2022-06-16T17:48:43 IST" duration-ms="47497">
+    <test started-at="2022-06-17T11:10:13 IST" name="Test" finished-at="2022-06-17T11:18:56 IST" duration-ms="523466">
+      <class name="createMultipleDrafts.SaveNewdraft">
+        <test-method signature="saveNewDraft()[pri:0, instance:createMultipleDrafts.SaveNewdraft@106cc338]" started-at="2022-06-17T11:10:55 IST" name="saveNewDraft" finished-at="2022-06-17T11:12:42 IST" duration-ms="106991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveNewDraft -->
+      </class> <!-- createMultipleDrafts.SaveNewdraft -->
+      <class name="EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft">
+        <test-method signature="saveDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft@5c2375a9]" started-at="2022-06-17T11:16:31 IST" name="saveDraft" finished-at="2022-06-17T11:17:04 IST" duration-ms="32205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft -->
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee">
+        <test-method signature="createEmployee()[pri:0, instance:EHUB.GHR_CreateEmployee.CreateEmployee@6239aba6]" started-at="2022-06-17T11:10:13 IST" name="createEmployee" finished-at="2022-06-17T11:10:55 IST" duration-ms="42026" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployee -->
+      </class> <!-- EHUB.GHR_CreateEmployee.CreateEmployee -->
+      <class name="EHUB.GHR_CreateEmployee.OpenDraft_withSelectingAnyDraft">
+        <test-method signature="saveDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.OpenDraft_withSelectingAnyDraft@7a67e3c6]" started-at="2022-06-17T11:12:42 IST" name="saveDraft" finished-at="2022-06-17T11:13:14 IST" duration-ms="32794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.OpenDraft_withSelectingAnyDraft -->
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed">
+        <test-method signature="createEmployee()[pri:0, instance:EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed@6cc558c6]" started-at="2022-06-17T11:13:14 IST" name="createEmployee" finished-at="2022-06-17T11:14:02 IST" duration-ms="48016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployee -->
+      </class> <!-- EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed -->
       <class name="EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts">
-        <test-method signature="deleteDraftClearAll()[pri:1, instance:EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts@58695725]" started-at="2022-06-16T17:47:56 IST" name="deleteDraftClearAll" finished-at="2022-06-16T17:48:42 IST" duration-ms="46013" status="PASS">
+        <test-method signature="deleteDraftClearAll()[pri:1, instance:EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts@78d6692f]" started-at="2022-06-17T11:17:44 IST" name="deleteDraftClearAll" finished-at="2022-06-17T11:18:10 IST" duration-ms="26653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteDraftClearAll -->
-        <test-method signature="saveDraft()[pri:2, instance:EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts@58695725]" started-at="2022-06-16T17:48:42 IST" name="saveDraft" finished-at="2022-06-16T17:48:43 IST" duration-ms="1451" status="PASS">
+        <test-method signature="saveDraft()[pri:2, instance:EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts@78d6692f]" started-at="2022-06-17T11:18:10 IST" name="saveDraft" finished-at="2022-06-17T11:18:17 IST" duration-ms="6971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- saveDraft -->
       </class> <!-- EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID">
+        <test-method signature="createEmployee()[pri:0, instance:EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID@d41f816]" started-at="2022-06-17T11:15:50 IST" name="createEmployee" finished-at="2022-06-17T11:16:31 IST" duration-ms="40955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployee -->
+      </class> <!-- EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID -->
+      <class name="EHUB.GHR_CreateEmployee.SaveNewdraft">
+        <test-method signature="saveNewDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.SaveNewdraft@60129b9a]" started-at="2022-06-17T11:17:04 IST" name="saveNewDraft" finished-at="2022-06-17T11:17:44 IST" duration-ms="40099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveNewDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.SaveNewdraft -->
+      <class name="EHUB.GHR_CreateEmployee.Delete_Single_Draft">
+        <test-method signature="saveDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.Delete_Single_Draft@26ceffa8]" started-at="2022-06-17T11:15:28 IST" name="saveDraft" finished-at="2022-06-17T11:15:50 IST" duration-ms="22113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.Delete_Single_Draft -->
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_SameName">
+        <test-method signature="saveDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.savedraft_multipletimes_SameName@7a55af6b]" started-at="2022-06-17T11:18:17 IST" name="saveDraft" finished-at="2022-06-17T11:18:56 IST" duration-ms="38702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.savedraft_multipletimes_SameName -->
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel">
+        <test-method signature="createEmployee()[pri:0, instance:EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel@63f259c3]" started-at="2022-06-17T11:14:46 IST" name="createEmployee" finished-at="2022-06-17T11:15:28 IST" duration-ms="42764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployee -->
+      </class> <!-- EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel -->
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_UniqueName">
+        <test-method signature="saveDraft()[pri:0, instance:EHUB.GHR_CreateEmployee.savedraft_multipletimes_UniqueName@15713d56]" started-at="2022-06-17T11:14:02 IST" name="saveDraft" finished-at="2022-06-17T11:14:46 IST" duration-ms="43121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveDraft -->
+      </class> <!-- EHUB.GHR_CreateEmployee.savedraft_multipletimes_UniqueName -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

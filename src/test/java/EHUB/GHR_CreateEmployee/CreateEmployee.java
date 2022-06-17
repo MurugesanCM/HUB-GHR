@@ -37,6 +37,11 @@ public class CreateEmployee extends BaseClass {
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
 		hubhome.ClickOnForm("HIRE").click();
+		login.changeWaitTime(3);
+		try{hubhome.clickOnCountryFilter();}
+		catch(Exception e)
+		{hubhome.CreateNewDraft().click();}
+		login.changeWaitTime(30);
 		// Select the Country
 		hubhome.clickOnCountryFilter().sendKeys(country);
 		hubhome.selectValueFromFilter(country).click();

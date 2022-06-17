@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test" preserve-order="true">
-		<classes>
-			<class name="EHUB.GHR_CreateEmployee.CreateEmployee" />
-			<class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID" />
-			<class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed" />
-			<class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel" />
-			<class name="EHUB.GHR_CreateEmployee.savedraft" />
-			<class name="EHUB.GHR_CreateEmployee.DeleteDraft" />
-		</classes>
-	</test> <!-- Test -->
+<listeners>
+<listener class-name="Listener.Listeners"></listener>
+</listeners>
+  <test thread-count="5" name="Test" preserve-order="true">
+    <classes>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee"/>  
+      <class name="createMultipleDrafts.SaveNewdraft"/>
+      <class name="EHUB.GHR_CreateEmployee.OpenDraft_withSelectingAnyDraft"/>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed"/>
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_UniqueName"/>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel"/>
+      <class name="EHUB.GHR_CreateEmployee.Delete_Single_Draft"/>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID"/>
+      <class name="EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft"/>
+      <class name="EHUB.GHR_CreateEmployee.SaveNewdraft"/>
+      <class name="EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts"/>
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_SameName"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
