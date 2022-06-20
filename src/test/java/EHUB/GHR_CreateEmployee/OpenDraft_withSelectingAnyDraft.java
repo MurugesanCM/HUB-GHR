@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Resources.BaseClass;
-
+@Test
 public class OpenDraft_withSelectingAnyDraft extends BaseClass {
 
 	public WebDriver driver;
 		@Test
-	public void saveDraft() throws IOException, InterruptedException
+	public void openDraft_withSelectingAnyDraft() throws IOException, InterruptedException
 	{					
 		//Start Chromedriver
 		driver=initializeDriver();

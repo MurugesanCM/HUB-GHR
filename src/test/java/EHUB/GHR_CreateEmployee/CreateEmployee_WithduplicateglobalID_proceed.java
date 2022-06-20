@@ -9,13 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-
+@Test
 public class CreateEmployee_WithduplicateglobalID_proceed extends BaseClass {
 
 	public WebDriver driver;
 
 	@Test
-	public void createEmployee() throws IOException, InterruptedException {
+	public void createEmployee_WithduplicateglobalID_proceed() throws IOException, InterruptedException {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File

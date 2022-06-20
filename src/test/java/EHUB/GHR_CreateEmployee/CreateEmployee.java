@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-
+@Test
 public class CreateEmployee extends BaseClass {
 
 	public WebDriver driver;

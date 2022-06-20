@@ -9,13 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-
+@Test
 public class Delete_Single_Draft extends BaseClass {
 
 	public WebDriver driver;
 
 	@Test
-	public void deletDraft() throws IOException, InterruptedException {
+	public void deletsingleDraft() throws IOException, InterruptedException {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Enter URL

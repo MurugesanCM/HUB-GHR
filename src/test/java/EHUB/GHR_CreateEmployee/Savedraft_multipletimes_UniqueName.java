@@ -9,12 +9,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-
-public class savedraft_multipletimes_UniqueName extends BaseClass {
+@Test
+public class Savedraft_multipletimes_UniqueName extends BaseClass {
 
 	public WebDriver driver;
 		@Test
-	public void saveDraft() throws IOException, InterruptedException
+	public void savedraft_multipletimes_UniqueName() throws IOException, InterruptedException
 	{					
 		//Start Chromedriver
 		driver=initializeDriver();

@@ -177,4 +177,8 @@ public WebElement closedraftpopup(String draftwindowtype)
 {
 	return driver.findElement(By.xpath("//div[@id='"+draftwindowtype+"']//i[@id='closeModalIcon']"));
 }
+public WebElement DuplicateRecordsWindow()
+{
+	return driver.findElement(By.xpath("//div[.='Duplicate Records']"));
+}
 }
