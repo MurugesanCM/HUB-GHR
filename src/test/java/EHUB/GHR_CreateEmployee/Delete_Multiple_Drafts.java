@@ -10,7 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-@Test
 public class Delete_Multiple_Drafts extends BaseClass {
 
 	public WebDriver driver;
