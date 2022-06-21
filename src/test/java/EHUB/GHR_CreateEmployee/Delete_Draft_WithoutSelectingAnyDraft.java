@@ -2,7 +2,6 @@ package EHUB.GHR_CreateEmployee;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -29,7 +28,7 @@ public class Delete_Draft_WithoutSelectingAnyDraft extends BaseClass {
 		// Open EHUB Application
 		neosuite.OpenEhubApplication().click();
 		// Wait for the visibility of the Employee Creation ICON.
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[.='Employee']//parent::div//i")));
+		wait.until(ExpectedConditions.visibilityOf(hubhome.ehubIcon()));
 		// Click on the employee creation ICON
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
