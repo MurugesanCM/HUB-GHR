@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel">
+      <class name="ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative">
         <methods>
-          <include name="createEmployee_WithduplicateglobalID_Cancel"/>
+          <include name="SearchWithValidData"/>
         </methods>
-      </class> <!-- EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel -->
+      </class> <!-- ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

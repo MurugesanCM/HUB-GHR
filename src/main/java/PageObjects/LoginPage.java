@@ -38,7 +38,7 @@ public class LoginPage {
 	}
 	public void login()
 	{
-		driver.findElement(username).sendKeys("AT0006");
+		driver.findElement(username).sendKeys("NYM105276");
 		driver.findElement(password).sendKeys("Neeyamo@123");
 		driver.findElement(loginButton).click();
 	}
@@ -60,16 +60,16 @@ public class LoginPage {
 	public void logOut() throws InterruptedException {
 		driver.findElement(By.xpath("//a[@data"
 				+ "-target='setting_SideBar_out']")).click();
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@title='Logout']")));
 		driver.findElement(By.xpath("//li[@title='Logout']")).click();
 	}
 
 	public void URL(String URL) {
 		if (URL.equals("UAT"))
-			driver.get("https://neosuiteuat.neeyamo.works/login");
+			driver.get("https://neosuiteuat5ca.neeyamo.works");
 		else if (URL.equals("UAT - 5ca"))
 			driver.get(
-					"https://neosuiteuat5ca.neeyamo.works/login");
+					"https://neosuiteuat5ca.neeyamo.works");
 		else if (URL.equals("preprod"))
 			driver.get("https://neosuitepreprodneeyamo.neeyamo.com/login");
 		else if (URL.equals("LT"))
@@ -78,5 +78,13 @@ public class LoginPage {
 	public Timeouts changeWaitTime(int duration)
 	{
 		return driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(duration));
+	}
+
+	public void loginWithParameter(String username1, String password1) {
+		// TODO Auto-generated method stub
+		driver.findElement(username).sendKeys(username1);
+		driver.findElement(password).sendKeys(password1);
+		driver.findElement(loginButton).click();
+		
 	}
 }

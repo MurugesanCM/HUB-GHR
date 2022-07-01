@@ -19,8 +19,8 @@ public class CreateEmployee extends BaseClass {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File
-		String country = "India";
-		String legalEntity = "Neeyamo Enterprise Solutions";
+		String country = "Mexico";
+		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";
 		// Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login

@@ -181,4 +181,12 @@ public WebElement DuplicateRecordsWindow()
 {
 	return driver.findElement(By.xpath("//div[.='Duplicate Records']"));
 }
+public WebElement yesButton() {
+	// TODO Auto-generated method stub
+	return driver.findElement(By.xpath("//*[@id=\"cancelPopupModal\"]//button//span[.='Yes']"));
+}
+public WebElement noButton() {
+	// TODO Auto-generated method stub
+	return driver.findElement(By.xpath("//*[@id=\"cancelPopupModal\"]//button//span[.='No']"));
+}
 }

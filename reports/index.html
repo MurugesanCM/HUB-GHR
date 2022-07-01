@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">GHR Role</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 20, 2022 03:58:27 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jun 24, 2022 06:02:48 PM</span></a>
 </li>
 </ul>
 </div>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,39 +75,58 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">createEmployee</p>
             <p class="text-sm">
-              <span>3:58:27 PM</span> / <span>00:00:49:521</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:02:49 PM</span> / <span>00:00:38:866</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">createEmployee</h5>
-<span class='badge badge-success'>06.20.2022 3:58:27 PM</span>
-<span class='badge badge-danger'>06.20.2022 3:59:17 PM</span>
-<span class='badge badge-default'>00:00:49:521</span>
+<h5 class="test-status text-fail">createEmployee</h5>
+<span class='badge badge-success'>06.24.2022 6:02:49 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:03:27 PM</span>
+<span class='badge badge-default'>00:00:38:866</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\HUB_GHR\reports\createEmployee.png' src="D:\HUB_GHR\reports\createEmployee.png">
+    <div class="title">createEmployee</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:59:17 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:03:27 PM</td>
         <td>
-          Passed:: createEmployee
+          Failed:: createEmployee
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:03:27 PM</td>
+        <td>
+          Failed:: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@title='Hub']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24f6934a17f0e5081ef8e11d762f2c04, findElement {using=xpath, value=//div[@title='Hub']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56299}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56299/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 24f6934a17f0e5081ef8e11d762f2c04
         </td>
       </tr>
   </tbody>
@@ -114,39 +134,58 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">saveNewDraft</p>
             <p class="text-sm">
-              <span>3:59:17 PM</span> / <span>00:01:35:854</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:03:27 PM</span> / <span>00:00:32:260</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">saveNewDraft</h5>
-<span class='badge badge-success'>06.20.2022 3:59:17 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:00:53 PM</span>
-<span class='badge badge-default'>00:01:35:854</span>
+<h5 class="test-status text-fail">saveNewDraft</h5>
+<span class='badge badge-success'>06.24.2022 6:03:27 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:04:00 PM</span>
+<span class='badge badge-default'>00:00:32:260</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\HUB_GHR\reports\saveNewDraft.png' src="D:\HUB_GHR\reports\saveNewDraft.png">
+    <div class="title">saveNewDraft</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:00:53 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:04:00 PM</td>
         <td>
-          Passed:: saveNewDraft
+          Failed:: saveNewDraft
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:04:00 PM</td>
+        <td>
+          Failed:: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@title='Hub']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1b03dd63a116465687cea8cf9ccb2301, findElement {using=xpath, value=//div[@title='Hub']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56379}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56379/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b03dd63a116465687cea8cf9ccb2301
         </td>
       </tr>
   </tbody>
@@ -154,39 +193,58 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">openDraft_withSelectingAnyDraft</p>
             <p class="text-sm">
-              <span>4:00:53 PM</span> / <span>00:00:28:066</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:04:00 PM</span> / <span>00:00:35:456</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">openDraft_withSelectingAnyDraft</h5>
-<span class='badge badge-success'>06.20.2022 4:00:53 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:01:21 PM</span>
-<span class='badge badge-default'>00:00:28:066</span>
+<h5 class="test-status text-fail">openDraft_withSelectingAnyDraft</h5>
+<span class='badge badge-success'>06.24.2022 6:04:00 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:04:35 PM</span>
+<span class='badge badge-default'>00:00:35:456</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\HUB_GHR\reports\openDraft_withSelectingAnyDraft.png' src="D:\HUB_GHR\reports\openDraft_withSelectingAnyDraft.png">
+    <div class="title">openDraft_withSelectingAnyDraft</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:01:21 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:04:35 PM</td>
         <td>
-          Passed:: openDraft_withSelectingAnyDraft
+          Failed:: openDraft_withSelectingAnyDraft
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:04:35 PM</td>
+        <td>
+          Failed:: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@title='Hub']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [86b03e52fe356e3689dc656574ff994f, findElement {using=xpath, value=//div[@title='Hub']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56460}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56460/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86b03e52fe356e3689dc656574ff994f
         </td>
       </tr>
   </tbody>
@@ -194,39 +252,58 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">createEmployee_WithduplicateglobalID_proceed</p>
             <p class="text-sm">
-              <span>4:01:21 PM</span> / <span>00:00:45:203</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:04:35 PM</span> / <span>00:00:33:024</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">createEmployee_WithduplicateglobalID_proceed</h5>
-<span class='badge badge-success'>06.20.2022 4:01:21 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:02:06 PM</span>
-<span class='badge badge-default'>00:00:45:203</span>
+<h5 class="test-status text-fail">createEmployee_WithduplicateglobalID_proceed</h5>
+<span class='badge badge-success'>06.24.2022 6:04:35 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:05:08 PM</span>
+<span class='badge badge-default'>00:00:33:024</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\HUB_GHR\reports\createEmployee_WithduplicateglobalID_proceed.png' src="D:\HUB_GHR\reports\createEmployee_WithduplicateglobalID_proceed.png">
+    <div class="title">createEmployee_WithduplicateglobalID_proceed</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:02:06 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:05:08 PM</td>
         <td>
-          Passed:: createEmployee_WithduplicateglobalID_proceed
+          Failed:: createEmployee_WithduplicateglobalID_proceed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:05:08 PM</td>
+        <td>
+          Failed:: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@title='Hub']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [51bcb0e0dba150eb7559b724887eef83, findElement {using=xpath, value=//div[@title='Hub']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56539}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56539/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51bcb0e0dba150eb7559b724887eef83
         </td>
       </tr>
   </tbody>
@@ -234,39 +311,58 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="fail" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">savedraft_multipletimes_UniqueName</p>
             <p class="text-sm">
-              <span>4:02:06 PM</span> / <span>00:00:42:201</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:05:08 PM</span> / <span>00:00:36:064</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">savedraft_multipletimes_UniqueName</h5>
-<span class='badge badge-success'>06.20.2022 4:02:06 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:02:48 PM</span>
-<span class='badge badge-default'>00:00:42:201</span>
+<h5 class="test-status text-fail">savedraft_multipletimes_UniqueName</h5>
+<span class='badge badge-success'>06.24.2022 6:05:08 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:05:44 PM</span>
+<span class='badge badge-default'>00:00:36:064</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\HUB_GHR\reports\savedraft_multipletimes_UniqueName.png' src="D:\HUB_GHR\reports\savedraft_multipletimes_UniqueName.png">
+    <div class="title">savedraft_multipletimes_UniqueName</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:02:48 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:05:44 PM</td>
         <td>
-          Passed:: savedraft_multipletimes_UniqueName
+          Failed:: savedraft_multipletimes_UniqueName
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:05:44 PM</td>
+        <td>
+          Failed:: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@title='Hub']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a38a46ff12966ffdf8c58827ec1831a1, findElement {using=xpath, value=//div[@title='Hub']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56614}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56614/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a38a46ff12966ffdf8c58827ec1831a1
         </td>
       </tr>
   </tbody>
@@ -281,7 +377,7 @@
           <div class="test-detail">
             <p class="name">createEmployee_WithduplicateglobalID_Cancel</p>
             <p class="text-sm">
-              <span>4:02:48 PM</span> / <span>00:00:49:264</span>
+              <span>6:05:44 PM</span> / <span>00:00:42:092</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -290,9 +386,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">createEmployee_WithduplicateglobalID_Cancel</h5>
-<span class='badge badge-success'>06.20.2022 4:02:48 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:03:38 PM</span>
-<span class='badge badge-default'>00:00:49:264</span>
+<span class='badge badge-success'>06.24.2022 6:05:44 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:06:26 PM</span>
+<span class='badge badge-default'>00:00:42:092</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -304,7 +400,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:03:38 PM</td>
+        <td>6:06:26 PM</td>
         <td>
           Passed:: createEmployee_WithduplicateglobalID_Cancel
         </td>
@@ -314,25 +410,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">deletsingleDraft</p>
             <p class="text-sm">
-              <span>4:03:38 PM</span> / <span>00:00:21:925</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>6:06:26 PM</span> / <span>00:00:06:729</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">deletsingleDraft</h5>
-<span class='badge badge-success'>06.20.2022 4:03:38 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:03:59 PM</span>
-<span class='badge badge-default'>00:00:21:925</span>
+<h5 class="test-status text-fail">deletsingleDraft</h5>
+<span class='badge badge-success'>06.24.2022 6:06:26 PM</span>
+<span class='badge badge-danger'>06.24.2022 6:06:33 PM</span>
+<span class='badge badge-default'>00:00:06:729</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -343,290 +439,48 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:03:59 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:06:33 PM</td>
         <td>
-          Passed:: deletsingleDraft
+          Failed:: deletsingleDraft
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">createEmployee_WithduplicateglobalID</p>
-            <p class="text-sm">
-              <span>4:03:59 PM</span> / <span>00:00:42:985</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">createEmployee_WithduplicateglobalID</h5>
-<span class='badge badge-success'>06.20.2022 4:03:59 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:04:42 PM</span>
-<span class='badge badge-default'>00:00:42:985</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:04:42 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:06:33 PM</td>
         <td>
-          Passed:: createEmployee_WithduplicateglobalID
+          Failed:: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=102.0.5005.115)
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d4ac50a065d39b51b89db53dd3a2a187, sendKeysToElement {id=9e0a5ddb-31fb-4af4-ad90-131087ae58c1, value=[Ljava.lang.CharSequence;@7841bd30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56799}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56799/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (d4ac50a065d39b51b89db53dd3a2a187)] -> id: username]
+Session ID: d4ac50a065d39b51b89db53dd3a2a187
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">openDraft_WithoutSelectingAnyDraft</p>
-            <p class="text-sm">
-              <span>4:04:42 PM</span> / <span>00:00:25:997</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">openDraft_WithoutSelectingAnyDraft</h5>
-<span class='badge badge-success'>06.20.2022 4:04:42 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:05:08 PM</span>
-<span class='badge badge-default'>00:00:25:997</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:05:08 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:06:33 PM</td>
         <td>
-          Passed:: openDraft_WithoutSelectingAnyDraft
+          Failed:: deletsingleDraft
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">saveNewDraft</p>
-            <p class="text-sm">
-              <span>4:05:08 PM</span> / <span>00:00:47:404</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">saveNewDraft</h5>
-<span class='badge badge-success'>06.20.2022 4:05:08 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:05:56 PM</span>
-<span class='badge badge-default'>00:00:47:404</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:05:56 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:06:33 PM</td>
         <td>
-          Passed:: saveNewDraft
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">deleteDraftClearAll</p>
-            <p class="text-sm">
-              <span>4:05:56 PM</span> / <span>00:00:21:604</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">deleteDraftClearAll</h5>
-<span class='badge badge-success'>06.20.2022 4:05:56 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:06:17 PM</span>
-<span class='badge badge-default'>00:00:21:604</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:06:17 PM</td>
-        <td>
-          Passed:: deleteDraftClearAll
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">deleteDrafts</p>
-            <p class="text-sm">
-              <span>4:06:17 PM</span> / <span>00:00:00:582</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">deleteDrafts</h5>
-<span class='badge badge-success'>06.20.2022 4:06:17 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:06:18 PM</span>
-<span class='badge badge-default'>00:00:00:582</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:06:18 PM</td>
-        <td>
-          Passed:: deleteDrafts
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">savedraft_multipletimes_SameName</p>
-            <p class="text-sm">
-              <span>4:06:18 PM</span> / <span>00:00:44:038</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">savedraft_multipletimes_SameName</h5>
-<span class='badge badge-success'>06.20.2022 4:06:18 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:07:02 PM</span>
-<span class='badge badge-default'>00:00:44:038</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:07:02 PM</td>
-        <td>
-          Passed:: savedraft_multipletimes_SameName
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">deletDraftCloseBtn</p>
-            <p class="text-sm">
-              <span>4:07:02 PM</span> / <span>00:00:18:725</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">deletDraftCloseBtn</h5>
-<span class='badge badge-success'>06.20.2022 4:07:02 PM</span>
-<span class='badge badge-danger'>06.20.2022 4:07:21 PM</span>
-<span class='badge badge-default'>00:00:18:725</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:07:21 PM</td>
-        <td>
-          Passed:: deletDraftCloseBtn
+          Failed:: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=102.0.5005.115)
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d4ac50a065d39b51b89db53dd3a2a187, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\ET1197\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:56799}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56799/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d4ac50a065d39b51b89db53dd3a2a187
         </td>
       </tr>
   </tbody>
@@ -648,25 +502,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 20, 2022 03:58:27 PM</h3>
+<h3>Jun 24, 2022 06:02:48 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 20, 2022 04:07:21 PM</h3>
+<h3>Jun 24, 2022 06:06:33 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>14</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>6</h3>
 </div></div>
 </div>
 </div>
@@ -682,12 +536,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>14</b> tests passed
+<div><small data-tooltip='14%'>
+<b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='85%'><b>6</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -705,9 +559,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>14</b> events passed</small></div>
+<div><small data-tooltip='6%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
+<small data-tooltip='93%'><b>14</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -724,7 +578,7 @@
 </div></div>
 <script>
 var timeline = {
-"createEmployee":49.521,"saveNewDraft":95.854,"openDraft_withSelectingAnyDraft":28.066,"createEmployee_WithduplicateglobalID_proceed":45.203,"savedraft_multipletimes_UniqueName":42.201,"createEmployee_WithduplicateglobalID_Cancel":49.264,"deletsingleDraft":21.925,"createEmployee_WithduplicateglobalID":42.985,"openDraft_WithoutSelectingAnyDraft":25.997,"saveNewDraft":47.404,"deleteDraftClearAll":21.604,"deleteDrafts":0.582,"savedraft_multipletimes_SameName":44.038,"deletDraftCloseBtn":18.725
+"createEmployee":38.866,"saveNewDraft":32.26,"openDraft_withSelectingAnyDraft":35.456,"createEmployee_WithduplicateglobalID_proceed":33.024,"savedraft_multipletimes_UniqueName":36.064,"createEmployee_WithduplicateglobalID_Cancel":42.092,"deletsingleDraft":6.729
 };
 </script>
 <div class="row">
@@ -763,8 +617,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 14,
-failParent: 0,
+passParent: 1,
+failParent: 6,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -780,8 +634,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 14,
-failEvents: 0,
+passEvents: 1,
+failEvents: 14,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

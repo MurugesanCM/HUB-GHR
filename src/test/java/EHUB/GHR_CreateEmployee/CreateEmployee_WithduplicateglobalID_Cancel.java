@@ -19,8 +19,8 @@ public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File
-		String country = "India";
-		String legalEntity = "Neeyamo Enterprise Solutions";
+		String country = "Mexico";
+		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";
 		// Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login
@@ -36,7 +36,7 @@ public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 		// Click on the employee creation ICON
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
-		hubhome.ClickOnForm("HIRE").click();
+		hubhome.ClickOnForm("Hire").click();
 		login.changeWaitTime(3);
 		try{hubhome.clickOnCountryFilter();}
 		catch(Exception e)

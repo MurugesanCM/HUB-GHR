@@ -43,7 +43,10 @@ public class OpenDraft_withSelectingAnyDraft extends BaseClass {
 		//Select the draft
 		hubhome.clickonselectDraft().click();
 		generalFunction.javascriptclick(hubhome.selectValueFromFilter("Murugesan"));
+		try {
 		hubhome.openFromDraft().click();
+		}
+		catch(Exception e) {Assert.fail("Open Draft button is not working");}
 		//Click on Edit Form
 		//Verify whether the functionality is working.
 	    Assert.assertTrue(hubhome.clickOnEditButton().isDisplayed(), "Open Draft Functionality is not working");

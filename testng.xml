@@ -16,6 +16,7 @@
       <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID"/>
       <class name="EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft"/>
       <class name="EHUB.GHR_CreateEmployee.SaveNewdraft"/>
+      <class name="EHUB.GHR_CreateEmployee.Select_Draft_After_Creating_A_Draft"></class>
       <class name="EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts"/>
       <class name="EHUB.GHR_CreateEmployee.Savedraft_multipletimes_SameName"/>
       <class name="EHUB.GHR_CreateEmployee.DeleteDraftCloseBtn"></class>
