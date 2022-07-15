@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class EmployeeListView {
+public class ActionRequeststab {
 	public WebDriver driver;
 	public Properties prop;
 	public WebDriverWait wait;
@@ -21,7 +21,7 @@ public class EmployeeListView {
 	public NeosuiteHomePage neosuite;
 	public generalFunctions generalFunction;
 	public EHUBHome hubhome;
-public EmployeeListView(WebDriver driver,Properties prop,WebDriverWait wait) throws IOException
+public ActionRequeststab(WebDriver driver,Properties prop,WebDriverWait wait) throws IOException
 {
 	this.driver=driver;
 	this.prop=prop;
@@ -261,5 +261,39 @@ public void applyFilterButton() {
 public void ResetFilter() {
 	// TODO Auto-generated method stub
 	driver.findElement(filterReset).click();
+}
+public void switchScreen(String screenName)
+{
+	driver.findElement(By.xpath("//span[@class='viewTicketTabSpan'][.='"+screenName+"']")).click();
+}
+public void FilterWithStatus(String WidgetName,String Status) throws InterruptedException {
+	// TODO Auto-generated method stubdriver = initializeDriver();
+	// Get the necessary values from properties File
+	// Enter URL
+	login.URL("UAT");
+	// Type User name,Password and click on login
+    login.login();
+	// Switch to GHR Role
+	wait.until(ExpectedConditions.visibilityOf(neosuite.OpenEhubApplication()));
+	login.switchToGHRRole();
+	wait.until(ExpectedConditions.stalenessOf(neosuite.OpenEhubApplication()));
+	// Open EHUB Application
+	neosuite.OpenEhubApplication().click();
+	// Wait for the visibility of the Employee Creation ICON.
+	//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[.='Employee']//parent::div//i")));
+	// Click on the employee creation ICON
+	wait.until(ExpectedConditions.visibilityOf(hubhome.ehubIcon()));
+	// Click on HIRE Form
+	hubhome.selectWidget("Action Requests View").click();
+	switchScreen(WidgetName);
+	WebElement FilterCount = driver.findElement(By.xpath("//div[@id='filterCol_"+Status+"']"));
+	String CountString = FilterCount.getAttribute("title");
+	String[] Values = CountString.split(" ");
+	int StatusCount = Integer.parseInt(Values[1]);
+	FilterCount.click();
+	int listViewCount = getElementsWithStatus(Status).size();
+	Assert.assertEquals(listViewCount,StatusCount,"Test Case Failed"+Status+"Filter is not Working in+"+WidgetName);
+	
+	
 }
 }

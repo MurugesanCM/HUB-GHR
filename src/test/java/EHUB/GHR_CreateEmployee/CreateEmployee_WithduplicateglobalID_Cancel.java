@@ -9,18 +9,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-@Test
+
 public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 
 	public WebDriver driver;
 
 	@Test
-	public void createEmployee_WithduplicateglobalID_Cancel() throws IOException, InterruptedException {
+	public void createEmployee() throws IOException, InterruptedException {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File
-		String country = "Mexico";
-		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";
+		String country = "India";
+		String legalEntity = "Neeyamo Enterprise Solutions";
 		// Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login
@@ -36,7 +36,7 @@ public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 		// Click on the employee creation ICON
 		hubhome.ehubIcon().click();
 		// Click on HIRE Form
-		hubhome.ClickOnForm("Hire").click();
+		hubhome.ClickOnForm("HIRE").click();
 		login.changeWaitTime(3);
 		try{hubhome.clickOnCountryFilter();}
 		catch(Exception e)
@@ -65,13 +65,7 @@ public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(hubhome.ProceedButton()));
 		wait.until(ExpectedConditions.invisibilityOf(neosuite.popUp()));
 		hubhome.DiscardButton().click();
-		login.changeWaitTime(3);
-		try {
-		wait.until(ExpectedConditions.invisibilityOf(hubhome.DuplicateRecordsWindow()));}
-		catch(Exception e)
-		{Assert.fail("Test Case Failed - Duplicate Records window not closed");}
-		login.changeWaitTime(30);
-		Assert.assertTrue(!(hubhome.DuplicateRecordsWindow().isDisplayed()),"Discard button not working");
+		Assert.assertTrue(!(hubhome.DiscardButton().isDisplayed()),"Discard button not working");
 		driver.quit();
 	}
 }

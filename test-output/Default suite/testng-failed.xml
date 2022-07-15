@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative">
+      <class name="action_Requests.ActionRequetsMyRequestsFilter">
         <methods>
-          <include name="SearchWithValidData"/>
+          <include name="filterByRejectedStatus"/>
+          <include name="filterByApprovedStatus"/>
+          <include name="Quit"/>
+          <include name="invokeBrowser"/>
+          <include name="filterByCancelledStatus"/>
         </methods>
-      </class> <!-- ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative -->
+      </class> <!-- action_Requests.ActionRequetsMyRequestsFilter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -48,7 +48,6 @@ public void editandupdate() throws IOException, InterruptedException
 	String initialValue = hubhome.selectfield("Designation/Job Title").findElement(By.xpath("//parent::div//div[contains(text(),' Business Analyst ')]")).getText();
 	System.out.println(initialValue);
 	hubhome.saveButton().click();
-	hubhome.yesButton().click();
 	String updatedValue = hubhome.selectfield("Designation/Job Title").findElement(By.xpath("//parent::div//div[contains(text(),' Business Analyst ')]")).getText();
 	Assert.assertEquals(initialValue, updatedValue);
 	//driver.quit();

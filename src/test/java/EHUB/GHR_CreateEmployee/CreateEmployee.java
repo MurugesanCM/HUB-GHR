@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-@Test
+
 public class CreateEmployee extends BaseClass {
 
 	public WebDriver driver;
@@ -19,8 +19,8 @@ public class CreateEmployee extends BaseClass {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File
-		String country = "Mexico";
-		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";
+		String country = "India";
+		String legalEntity = "Neeyamo Enterprise Solutions";
 		// Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login

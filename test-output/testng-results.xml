@@ -1,68 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-01T17:54:56 IST" name="Default suite" finished-at="2022-07-01T17:55:16 IST" duration-ms="19872">
+  <suite started-at="2022-07-15T22:13:48 IST" name="Default suite" finished-at="2022-07-15T22:15:43 IST" duration-ms="114675">
     <groups>
     </groups>
-    <test started-at="2022-07-01T17:54:56 IST" name="Default test" finished-at="2022-07-01T17:55:16 IST" duration-ms="19872">
-      <class name="ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative">
-        <test-method signature="SearchWithValidData()[pri:0, instance:ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative@2c35e847]" started-at="2022-07-01T17:54:56 IST" name="SearchWithValidData" finished-at="2022-07-01T17:55:16 IST" duration-ms="19836" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with locator By.xpath: //div[@title='Hub']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[@title='Hub']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'NWCHNLAP004', ip: '169.254.252.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at PageObjects.NeosuiteHomePage.OpenEhubApplication(NeosuiteHomePage.java:22)
-at ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative.SearchWithValidData(UniversalSearch_Positive_Negative.java:20)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+    <test started-at="2022-07-15T22:13:48 IST" name="Default test" finished-at="2022-07-15T22:15:43 IST" duration-ms="114675">
+      <class name="action_Requests.ActionRequets_MY_REQUESTS_Filter">
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:13:48 IST" name="invokeBrowser" finished-at="2022-07-15T22:13:56 IST" duration-ms="7765" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchWithValidData -->
-      </class> <!-- ListViewTestCases_ViewEmployee.UniversalSearch_Positive_Negative -->
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="filterByOpenStatus()[pri:1, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:13:56 IST" name="filterByOpenStatus" finished-at="2022-07-15T22:14:28 IST" duration-ms="31784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByOpenStatus -->
+        <test-method is-config="true" signature="Quit()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:28 IST" name="Quit" finished-at="2022-07-15T22:14:28 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit -->
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:28 IST" name="invokeBrowser" finished-at="2022-07-15T22:14:29 IST" duration-ms="1469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="filterByRejectedStatus()[pri:2, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:29 IST" name="filterByRejectedStatus" finished-at="2022-07-15T22:14:54 IST" duration-ms="24298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByRejectedStatus -->
+        <test-method is-config="true" signature="Quit()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:54 IST" name="Quit" finished-at="2022-07-15T22:14:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit -->
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:54 IST" name="invokeBrowser" finished-at="2022-07-15T22:14:55 IST" duration-ms="1488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="filterByCancelledStatus()[pri:3, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:14:55 IST" name="filterByCancelledStatus" finished-at="2022-07-15T22:15:17 IST" duration-ms="22128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByCancelledStatus -->
+        <test-method is-config="true" signature="Quit()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:15:17 IST" name="Quit" finished-at="2022-07-15T22:15:19 IST" duration-ms="1283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit -->
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:15:19 IST" name="invokeBrowser" finished-at="2022-07-15T22:15:20 IST" duration-ms="1511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="filterByApprovedStatus()[pri:4, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:15:20 IST" name="filterByApprovedStatus" finished-at="2022-07-15T22:15:42 IST" duration-ms="21620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByApprovedStatus -->
+        <test-method is-config="true" signature="Quit()[pri:0, instance:action_Requests.ActionRequets_MY_REQUESTS_Filter@1b2abca6]" started-at="2022-07-15T22:15:42 IST" name="Quit" finished-at="2022-07-15T22:15:43 IST" duration-ms="1280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit -->
+      </class> <!-- action_Requests.ActionRequets_MY_REQUESTS_Filter -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

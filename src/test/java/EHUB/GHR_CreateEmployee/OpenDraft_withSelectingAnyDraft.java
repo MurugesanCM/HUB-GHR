@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Resources.BaseClass;
-@Test
+
 public class OpenDraft_withSelectingAnyDraft extends BaseClass {
 
 	public WebDriver driver;
 		@Test
-	public void openDraft_withSelectingAnyDraft() throws IOException, InterruptedException
+	public void saveDraft() throws IOException, InterruptedException
 	{					
 		//Start Chromedriver
 		driver=initializeDriver();
@@ -43,10 +43,7 @@ public class OpenDraft_withSelectingAnyDraft extends BaseClass {
 		//Select the draft
 		hubhome.clickonselectDraft().click();
 		generalFunction.javascriptclick(hubhome.selectValueFromFilter("Murugesan"));
-		try {
 		hubhome.openFromDraft().click();
-		}
-		catch(Exception e) {Assert.fail("Open Draft button is not working");}
 		//Click on Edit Form
 		//Verify whether the functionality is working.
 	    Assert.assertTrue(hubhome.clickOnEditButton().isDisplayed(), "Open Draft Functionality is not working");

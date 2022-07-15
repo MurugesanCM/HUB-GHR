@@ -9,18 +9,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-@Test
+
 public class CreateEmployee_WithduplicateglobalID extends BaseClass {
 
 	public WebDriver driver;
 
 	@Test
-	public void createEmployee_WithduplicateglobalID() throws IOException, InterruptedException {
+	public void createEmployee() throws IOException, InterruptedException {
 		// Start Chromedriver
 		driver = initializeDriver();
 		// Get the necessary values from properties File
-		String country = "Mexico";
-		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";
+		String country = "India";
+		String legalEntity = "Neeyamo Enterprise Solutions";
 		// Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login
@@ -62,6 +62,7 @@ public class CreateEmployee_WithduplicateglobalID extends BaseClass {
 		// Verify whether the functionality is working.
 		String popup = neosuite.popUp().getText();
 		Assert.assertEquals(popup, "Duplicate record found","Duplicate record found message is not popped up");
+		Assert.assertTrue(hubhome.ProceedButton().isDisplayed(),"Proceed button not visible");
 		driver.quit();
 	}
 }

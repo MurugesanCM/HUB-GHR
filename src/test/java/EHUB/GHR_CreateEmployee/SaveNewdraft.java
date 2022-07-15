@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
-@Test
+
 public class SaveNewdraft extends BaseClass {
 
 	public WebDriver driver;
@@ -18,8 +18,9 @@ public class SaveNewdraft extends BaseClass {
 		//Start Chromedriver
 		driver=initializeDriver();
 		//Get the necessary values from properties File
-		String country = "Mexico";
-		String legalEntity = "5CA Mexico S. DE R.L.DE C.V.";	//Enter URL
+		String country = "India";
+		String legalEntity = "Neeyamo Enterprise Solutions";
+		//Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login
         login.login();
@@ -41,13 +42,11 @@ public class SaveNewdraft extends BaseClass {
 		{hubhome.CreateNewDraft().click();}
 		login.changeWaitTime(30);
 		//Select the Country 
-		try {
 		hubhome.clickOnCountryFilter().sendKeys(country);
 		hubhome.selectValueFromFilter(country).click();
 		//Select the legal entity
 		hubhome.clickOnlegalEntityFilter().sendKeys(legalEntity);
-		hubhome.selectValueFromFilter(legalEntity).click();}
-		catch(Exception e) {Assert.fail("Create new draft button not working");}
+		hubhome.selectValueFromFilter(legalEntity).click();
 		//Click on Tick button to filter the selection.
 		hubhome.clickOnTickButton("TickButton").click();
 		//Click on Edit Form
@@ -68,9 +67,6 @@ public class SaveNewdraft extends BaseClass {
 	    String popup = neosuite.popUp().getText();
 	    Assert.assertEquals(popup, "Draft Saved");
 	    wait.until(ExpectedConditions.invisibilityOf(neosuite.popUp()));
-	    hubhome.ClickOnForm("HIRE").click();
-	    hubhome.clickonselectDraft().click();
-	    Assert.assertTrue(hubhome.selectValueFromFilter("Murugesan").isDisplayed(),"Created Draft not visible in drop down");
 	    driver.close();
 	}
 }

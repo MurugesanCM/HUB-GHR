@@ -14,8 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * This class will store all the locators and methods of login page
  */
 public class LoginPage {
-	WebDriver driver;
-	WebDriverWait wait;
+	public WebDriver driver;
+	public WebDriverWait wait;
 	By username = By.id("username");
 	By password = By.id("password");
 	By loginButton = By.id("kc-login");
@@ -38,7 +38,7 @@ public class LoginPage {
 	}
 	public void login()
 	{
-		driver.findElement(username).sendKeys("NYM105276");
+		driver.findElement(username).sendKeys("AT0006");
 		driver.findElement(password).sendKeys("Neeyamo@123");
 		driver.findElement(loginButton).click();
 	}
@@ -54,7 +54,10 @@ public class LoginPage {
 		driver.findElement(By.xpath("//span[@title='Hub']//parent::div//parent::div[1]//parent::li//child::div[@class='collapsible-body']//div[@class='row']//child::div//child::div//span[@title='Global HR']//parent::div//parent::div//div[2]//label//span[@class='lever']"))
 		.click();
 		WebElement element = driver.findElement(By.xpath("//a[@title='SAVE APP ROLE']"));
+		WebElement logout = driver.findElement(By.xpath("//li[@title='Logout']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", logout);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@title='SAVE APP ROLE']"))));
 			driver.findElement(By.xpath("//a[@title='SAVE APP ROLE']")).click();	}
 
 	public void logOut() throws InterruptedException {
@@ -66,7 +69,7 @@ public class LoginPage {
 
 	public void URL(String URL) {
 		if (URL.equals("UAT"))
-			driver.get("https://neosuiteuat5ca.neeyamo.works");
+			driver.get("https://neosuiteuat.neeyamo.works");
 		else if (URL.equals("UAT - 5ca"))
 			driver.get(
 					"https://neosuiteuat5ca.neeyamo.works");

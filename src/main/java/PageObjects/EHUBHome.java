@@ -95,7 +95,7 @@ public WebElement clearField(String fieldName) {
 }
 public WebElement selectWidget(String widgetName)
 {
-	return driver.findElement(By.xpath("//*[@id=\"advHomeScroll\"]/app-advanced-app/div[1]/div[2]/div/div/div/div/div[2]/div[@title='" + widgetName +"']"));
+	return driver.findElement(By.xpath("//*[@id=\"advHomeScroll\"]/app-advanced-app/div[1]/div[2]/div/div/div/div/div/div[2][@title='" + widgetName +"']"));
 }
 public WebElement clickOnViewRecord(String i, String colcount) {
 	// TODO Auto-generated method stub
@@ -189,4 +189,5 @@ public WebElement noButton() {
 	// TODO Auto-generated method stub
 	return driver.findElement(By.xpath("//*[@id=\"cancelPopupModal\"]//button//span[.='No']"));
 }
+
 }

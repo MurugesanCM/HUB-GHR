@@ -7,19 +7,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Resources.BaseClass;
-@Test
-public class Select_Draft_After_Creating_A_Draft_Another_User extends BaseClass {
+
+public class savedraft_multipletimes_SameName extends BaseClass {
 
 	public WebDriver driver;
 		@Test
-	public void openDraft_withSelectingAnyDraft() throws IOException, InterruptedException
+	public void saveDraft() throws IOException, InterruptedException
 	{					
 		//Start Chromedriver
 		driver=initializeDriver();
 		//Enter URL
 		login.URL("UAT");
 		// Type User name,Password and click on login
-        login.loginWithParameter("AT0008","Neeyamo@123");
+        login.login();
 		//Switch to GHR Role
 		wait.until(ExpectedConditions.visibilityOf(neosuite.OpenEhubApplication()));
 		login.switchToGHRRole();
@@ -42,7 +42,20 @@ public class Select_Draft_After_Creating_A_Draft_Another_User extends BaseClass 
 		login.changeWaitTime(30);
 		//Select the draft
 		hubhome.clickonselectDraft().click();
-		Assert.assertTrue(hubhome.selectValueFromFilter("Murugesan").isDisplayed(),"The Created Draft is not available in drop down for different user");
-		driver.close();
+		generalFunction.javascriptclick(hubhome.selectValueFromFilter("Murugesan"));
+		hubhome.openFromDraft().click();
+		//Click on Edit Form
+		hubhome.clickOnEditButton().click();
+		//Save Draft Flow
+		hubhome.deHazeButton().click();
+		hubhome.saveForLaterButton().click();
+		wait.until(ExpectedConditions.elementToBeClickable(hubhome.enterDraftName()));
+		wait.until(ExpectedConditions.visibilityOf(hubhome.clickOnTickButton("TickButtondraft")));
+		hubhome.clickOnTickButton("TickButtondraft").click();
+		//Verify whether the functionality is working.
+	    String popup = neosuite.popUp().getText();
+	    Assert.assertEquals(popup, "Draft Saved");
+	    wait.until(ExpectedConditions.invisibilityOf(neosuite.popUp()));
+	    driver.close();
 	}
 }
