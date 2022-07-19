@@ -3,15 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="action_Requests.ActionRequetsMyRequestsFilter">
+      <class name="action_Requests.Approve_Reject_In_Approvals">
         <methods>
-          <include name="filterByRejectedStatus"/>
-          <include name="filterByApprovedStatus"/>
-          <include name="Quit"/>
+          <include name="rejectRecordInViewScreen"/>
           <include name="invokeBrowser"/>
-          <include name="filterByCancelledStatus"/>
         </methods>
-      </class> <!-- action_Requests.ActionRequetsMyRequestsFilter -->
+      </class> <!-- action_Requests.Approve_Reject_In_Approvals -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
