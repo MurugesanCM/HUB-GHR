@@ -15,6 +15,8 @@ public EHUBHome(WebDriver driver,Properties prop2) throws IOException
 	this.driver=driver;
 	this.prop=prop2;
 }
+By ViewDocument = By.xpath("//a//i[@title='Document view']");
+By AddFile = By.xpath("//input[@id='addFile']");
 public WebElement ehubIcon()
 {
 	return driver.findElement(By.xpath(prop.getProperty("EHUB")));
@@ -67,24 +69,35 @@ public WebElement resetButton() {
 	// TODO Auto-generated method stub
 	return driver.findElement(By.xpath(prop.getProperty("reset")));
 }
+public WebElement resetButtonInForms() {
+	// TODO Auto-generated method stub
+	return driver.findElement(By.xpath(prop.getProperty("resetForm")));
+}
+public WebElement backButtoninEventForm()
+{
+	return driver.findElement(By.xpath(prop.getProperty("backButton")));
+}
 public WebElement getText()
 {
 	return driver.findElement(By.xpath("//span[@title='Legal Entity']//parent::div//parent::div//parent::legend//parent::fieldset//input//parent::div//parent::div//div[2][contains(text(),' NW_IND ')]"));
 }
 public WebElement selectfield(String fieldName)
 {
-	return driver.findElement(By.xpath("//span[@title='"+ fieldName + "']//parent::div//parent::div//parent::legend//parent::fieldset//input"));
+	return driver.findElement(By.xpath("//span[@title='"+ fieldName +"']//parent::div//parent::div//parent::legend//parent::fieldset//input[@type='text']"));
 }
-
+public WebElement SelectAttachmentForField(String fieldName)
+{
+return driver.findElement(By.xpath("//span[@title='"+ fieldName +"']//parent::div//parent::div//parent::legend//parent::fieldset//i[@title='File attachment']"));
+}
 public WebElement selectDrpdwnValue(String drpdwnvalue) {
 	// TODO Auto-generated method stub
 	try
 	{
-	return driver.findElement(By.xpath("//div[@role='option'][.=' "+ drpdwnvalue +" ']"));
+	return driver.findElement(By.xpath("//div[@role='option'][contains(text(),'"+ drpdwnvalue +"')]"));
 	}
 			catch(Exception e)
 	{
-		return 	driver.findElement(By.xpath("//div[@role='option']//span[.='"+ drpdwnvalue +"']"));	
+		return 	driver.findElement(By.xpath("//div[@role='option']//span[contains(text(),'"+ drpdwnvalue +"')]"));	
 	}
 }
 
@@ -188,6 +201,26 @@ public WebElement yesButton() {
 public WebElement noButton() {
 	// TODO Auto-generated method stub
 	return driver.findElement(By.xpath("//*[@id=\"cancelPopupModal\"]//button//span[.='No']"));
+}
+public WebElement YesSaveChanges()
+{
+	return driver.findElement(By.xpath(prop.getProperty("YesButton")));
+	
+}
+public WebElement viewDocument() {
+	// TODO Auto-generated method stub
+	return driver.findElement(ViewDocument);
+}
+
+public void addFile(String fileName) {
+	WebElement addFile = driver.findElement(AddFile);
+	addFile.sendKeys(System.getProperty("user.dir")+"//"+fileName);
+	
+}
+
+public WebElement removeDocument() {
+	// TODO Auto-generated method stub
+	return driver.findElement(By.xpath("//span[@title='Remove File']//i"));
 }
 
 }

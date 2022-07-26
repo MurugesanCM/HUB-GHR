@@ -462,8 +462,8 @@ public class ActionRequeststab {
 				By.xpath("//button[@title='Reject Ticket']//parent::span//parent::span//parent::td//parent::tr//button[@title='View']"));
 		int initialSize = PendingApprovals.size();
 		PendingApprovals.get(0).click();
-		driver.findElement(RejectButton).click();
-		//driver.findElement(By.xpath("//div[@id='approval']")).findElement(Enablecomments);
+		generalFunction.javascriptclick(driver.findElement(RejectButton));
+		generalFunction.javascriptclick(driver.findElement(By.xpath("//div[@id='approval']")).findElement(Comments));
 		driver.findElement(By.xpath("//div[@id='approval']")).findElement(Comments).sendKeys("Test Approval");
 		driver.findElement(TickButton).click();
 		String popup = neosuite.popUp().getText();
@@ -523,5 +523,43 @@ public class ActionRequeststab {
 		int listViewCount = getElementsWithStatus(Status).size();
 		softassert.assertEquals(listViewCount, StatusCount, "Cancelled Record Count is not updated in filter");
 		softassert.assertAll("Test Case Failed");
+	}
+	public void ViewRecord(String WidgetName) throws InterruptedException
+	{
+		// TODO Auto-generated method stubdriver = initializeDriver();
+				// Get the necessary values from properties File
+				// Enter URL
+				login.URL("UAT");
+				// Type User name,Password and click on login
+				login.login();
+				// Switch to GHR Role
+				wait.until(ExpectedConditions.visibilityOf(neosuite.OpenEhubApplication()));
+				login.switchToGHRRole();
+				wait.until(ExpectedConditions.stalenessOf(neosuite.OpenEhubApplication()));
+				// Open EHUB Application
+				neosuite.OpenEhubApplication().click();
+				// Wait for the visibility of the Employee Creation ICON.
+				// wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[.='Employee']//parent::div//i")));
+				// Click on the employee creation ICON
+				wait.until(ExpectedConditions.visibilityOf(hubhome.ehubIcon()));
+				// Click on HIRE Form
+				hubhome.selectWidget("Action Requests View").click();
+				switchScreen(WidgetName);
+				int column = 0;
+				List<WebElement> noOfColumns = driver.findElements(
+						By.xpath("//tr[1]//td//span[@title]"));
+				for(WebElement i:noOfColumns)
+				{
+					column++;
+					if(i.getAttribute("title").equals("Approval Id"))
+					{
+						break;
+					}
+				}
+				String approvalId = driver.findElement(By.xpath("//tr[2]//td["+(column+1)+"]")).getText();
+				driver.findElement(By.xpath("//tr[2]//td["+(column+1)+"]//parent::tr//button[@title='View']")).click();
+				List<WebElement> approvalIdInViewScreen = driver.findElements(By.xpath("//b"));
+				String ApprovalID = approvalIdInViewScreen.get(1).getText();
+				Assert.assertTrue(ApprovalID.contains(approvalId));
 	}
 }

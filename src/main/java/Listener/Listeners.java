@@ -16,6 +16,7 @@ import Resources.ExtentReporterNG;
 
 public class Listeners extends BaseClass implements ITestListener {
 	public ExtentTest test;
+	public WebDriver driver;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
@@ -38,7 +39,7 @@ public class Listeners extends BaseClass implements ITestListener {
 																								// Report
 		extentTest.get().log(Status.FAIL, "Failed:: " + result.getThrowable()); // To Add Error/Exception
 		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
 					.get(result.getInstance());
 		} catch (Exception e) {
 			e.printStackTrace();

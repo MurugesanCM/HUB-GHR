@@ -4,22 +4,33 @@
 <listeners>
 <listener class-name="Listener.Listeners"></listener>
 </listeners>
-  <test thread-count="5" name="Test" preserve-order="true">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="EHUB.GHR_CreateEmployee.CreateEmployee"/>  
-      <class name="createMultipleDrafts.SaveNewdraft"/>
+      <class name="EHUB.GHR_ViewEmployee.Editandupdate_ViewEmployee"/>
+      <class name="EHUB.GHR_ViewEmployee.EditandupdateWithoutMandatoryField_ViewEmployee"/>
       <class name="EHUB.GHR_CreateEmployee.OpenDraft_withSelectingAnyDraft"/>
+      <class name="EHUB.GHR_ViewEmployee.ResetForm_ViewEmployee"/>
       <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_proceed"/>
-      <class name="EHUB.GHR_CreateEmployee.Savedraft_multipletimes_UniqueName"/>
+      <class name="action_Requests.ActionRequets_MY_REQUESTS_Filter"/>
+      <class name="EHUB.GHR_ViewEmployee.ViewEmployee_ClearForm"/>
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_UniqueName"/>
+      <class name="EHUB.GHR_CreateEmployee.Delete_Draft_WithoutSelectingAnyDraft"/>
       <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID_Cancel"/>
-      <class name="EHUB.GHR_CreateEmployee.Delete_Single_Draft"/>
-      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID"/>
       <class name="EHUB.GHR_CreateEmployee.OpenDraft_WithoutSelectingAnyDraft"/>
       <class name="EHUB.GHR_CreateEmployee.SaveNewdraft"/>
-      <class name="EHUB.GHR_CreateEmployee.Select_Draft_After_Creating_A_Draft"></class>
       <class name="EHUB.GHR_CreateEmployee.Delete_Multiple_Drafts"/>
-      <class name="EHUB.GHR_CreateEmployee.Savedraft_multipletimes_SameName"/>
-      <class name="EHUB.GHR_CreateEmployee.DeleteDraftCloseBtn"></class>
-    </classes> 
+      <class name="EHUB.GHR_CreateEmployee.savedraft_multipletimes_SameName"/>
+      <class name="EHUB.GHR_ViewEmployee.View_Record_Particular_Employee"/>
+      <class name="AuditLog.AuditLogTestCases"/>
+      <class name="action_Requests.Approve_Reject_In_Approvals"/>
+      <class name="EHUB.GHR_CreateEmployee.DeleteDraftCloseBtn"/>
+      <class name="EHUB.GHR_CreateEmployee.Delete_Single_Draft"/>
+      <class name="action_Requests.ActionRequets_APPROVALS_Filter"/>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee_WithduplicateglobalID"/>
+      <class name="EHUB.GHR_CreateEmployee.CreateEmployee"/>
+      <class name="ListViewTestCases_ViewEmployee.ListView_TestCases"/>
+      <class name="action_Requests.Cancel_Record_In_My_Requests"/>
+      <class name="EHUB.GHR_ViewEmployee.ViewEmployee_BackToEventForms"/>
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -12,7 +12,6 @@ import Resources.BaseClass;
 
 public class CreateEmployee_WithduplicateglobalID_Cancel extends BaseClass {
 
-	public WebDriver driver;
 
 	@Test
 	public void createEmployee() throws IOException, InterruptedException {

@@ -1,6 +1,7 @@
 package ListViewTestCases_ViewEmployee;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
@@ -37,7 +42,7 @@ public void SearchWithValidData() throws IOException, InterruptedException
 	hubhome.selectWidget("Employee List View").click();
 	String searchedData = employeelistview.UniversalSearch("AT0008");
 	Assert.assertEquals(searchedData, "AT0008");
-	driver.close();
+	
 }
 @Test(priority = 2)
 public void SearchWithInValidData() throws InterruptedException, IOException
@@ -59,7 +64,7 @@ public void SearchWithInValidData() throws InterruptedException, IOException
 	//Enter Text in the search Field and Click on Search Icon
 	String searchedData = employeelistview.UniversalSearch("yysnwyns");
 	Assert.assertEquals(searchedData, "No Matches Found","No matches found message is not shown");
-	driver.close();
+
 }
 @Test(priority = 3)
 public void configureColumn() throws InterruptedException, IOException
@@ -84,7 +89,7 @@ public void configureColumn() throws InterruptedException, IOException
 		Assert.assertTrue(true);
 	else
 		Assert.fail("Test Case Failed - Column Enable Disable Feature not working");
-	driver.close();
+	
 }
 @Test(priority = 4)
 public void SelectAll() throws IOException, InterruptedException
@@ -104,7 +109,7 @@ public void SelectAll() throws IOException, InterruptedException
 	//switch to Employee List View Widget
 	hubhome.selectWidget("Employee List View").click();
 	employeelistview.selectAll();
-	driver.close();
+
 }
 @Test(priority = 5)
 public void ResetListView() throws InterruptedException, IOException
@@ -144,7 +149,6 @@ public void ResetListView() throws InterruptedException, IOException
 		table2Values.add(i.getText());
 	}
 	Assert.assertTrue(table2Values.equals(table1Values),"Test Case Failed - Reset Button Not Working");
-	driver.close();
 }
 @Test(priority = 6)
 public void configureColumnSearchValid() throws IOException, InterruptedException
@@ -163,7 +167,7 @@ public void configureColumnSearchValid() throws IOException, InterruptedExceptio
 	wait.until(ExpectedConditions.visibilityOf(hubhome.ehubIcon()));
 	//switch to Employee List View Widget
 	hubhome.selectWidget("Employee List View").click();
-	int condition = employeelistview.ConfigureColumnSearch("Global Id");
+	int condition = employeelistview.ConfigureColumnSearch("Title");
 	Assert.assertTrue(condition==1,"Test Case Failed - Configure column search not working");
 }
 @Test(priority = 7)
@@ -324,7 +328,7 @@ public void AdvanceFilterByCountryLegalEntityandLocation() throws IOException, I
 	employeelistview.AdvanceFilter("India","NYM_IND","Active","12/30/2021","Bangalore", 2, false);
 }*/
 @Test(priority = 14)
-public void AdvanceFilterByDoj() throws IOException, InterruptedException
+public void AdvanceFilterByDoj() throws IOException, InterruptedException, ParseException
 {
 	driver = initializeDriver();
 	String Doj = "12/1/2020";
@@ -343,7 +347,7 @@ public void AdvanceFilterByDoj() throws IOException, InterruptedException
 	hubhome.selectWidget("Employee List View").click();
 	employeelistview.clickonAdvanceFilter();
 	// 0 means filter with country,1 means filter with country and legal entity,2 means filter with country,legal entity and location ,3 means filter with DOJ,4 Employee status
-	employeelistview.AdvanceFilterByDoj(Doj);
+	employeelistview.AdvanceFilterByDoj(Doj,driver.findElement(By.xpath("//div[.='Date of joining']//div//input")));
 	employeelistview.applyFilterButton();
 	employeelistview.CompareWithpageCount(Doj);	
 }
@@ -372,7 +376,7 @@ public void AdvanceFilterByEmployeeStatus() throws IOException, InterruptedExcep
 	employeelistview.CompareWithpageCount("Active");	
 }
 @Test(priority = 16)
-public void AdvanceFilterReset() throws IOException, InterruptedException
+public void AdvanceFilterReset() throws IOException, InterruptedException, ParseException
 {
 	driver = initializeDriver();
 	login.URL("UAT");
@@ -403,5 +407,14 @@ public void AdvanceFilterReset() throws IOException, InterruptedException
 	int Count2=Integer.valueOf(Values[3]);
 	Assert.assertTrue(FilterCount==0&&Count1==Count2,"Test Case Failed - Filter Reset Not Working");	
 }
-
+@AfterClass
+public void quit()
+{
+	driver.quit();
+}
+@AfterSuite
+public void close()
+{
+	driver.quit();
+}
 }

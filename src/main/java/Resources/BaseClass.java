@@ -16,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PageObjects.ActionRequeststab;
+import PageObjects.AuditLog;
 import PageObjects.EHUBHome;
 import PageObjects.EmployeeListView;
 import PageObjects.LoginPage;
@@ -33,6 +34,7 @@ public class BaseClass {
 	public generalFunctions generalFunction;
 	public EmployeeListView employeelistview;
 	public ActionRequeststab actionRequest;
+	public AuditLog auditLog;
 public WebDriver initializeDriver() throws IOException, InterruptedException
 {
 	String ProjectFolderPath = System.getProperty("user.dir");
@@ -68,6 +70,7 @@ public WebDriver initializeDriver() throws IOException, InterruptedException
 	generalFunction = new generalFunctions(driver,prop);
 	employeelistview = new EmployeeListView(driver,prop,wait);
 	actionRequest = new ActionRequeststab(driver,prop, wait);
+	auditLog = new AuditLog(driver, prop, wait);
 	return driver;
 }
 public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException

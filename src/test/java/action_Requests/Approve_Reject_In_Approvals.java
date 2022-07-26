@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import Resources.BaseClass;
 
 public class Approve_Reject_In_Approvals extends BaseClass {
+
 @BeforeMethod
 public void invokeBrowser() throws IOException, InterruptedException
 {
@@ -28,5 +29,10 @@ public void rejectRecordInListView() throws InterruptedException
 public void rejectRecordInViewScreen() throws InterruptedException
 {
 	actionRequest.RejectRecord("APPROVALS", "Rejected");
+}
+@Test
+public void ViewRecord() throws InterruptedException
+{
+	actionRequest.ViewRecord("APPROVALS");
 }
 }

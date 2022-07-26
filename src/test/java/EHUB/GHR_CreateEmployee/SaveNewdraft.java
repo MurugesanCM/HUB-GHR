@@ -11,7 +11,6 @@ import Resources.BaseClass;
 
 public class SaveNewdraft extends BaseClass {
 
-	public WebDriver driver;
 		@Test
 	public void saveNewDraft() throws IOException, InterruptedException
 	{					

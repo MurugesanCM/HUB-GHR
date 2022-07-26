@@ -70,9 +70,9 @@ public class LoginPage {
 	public void URL(String URL) {
 		if (URL.equals("UAT"))
 			driver.get("https://neosuiteuat.neeyamo.works");
-		else if (URL.equals("UAT - 5ca"))
+		else if (URL.equals("UAT - Automation"))
 			driver.get(
-					"https://neosuiteuat5ca.neeyamo.works");
+					"https://neosuitenesauuat.neeyamo.works/login");
 		else if (URL.equals("preprod"))
 			driver.get("https://neosuitepreprodneeyamo.neeyamo.com/login");
 		else if (URL.equals("LT"))

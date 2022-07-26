@@ -1,6 +1,9 @@
 package PageObjects;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -128,7 +131,7 @@ public void lvcReset() {
 	driver.findElement(ResetButton).click();
 	
 }
-public void AdvanceFilter(String country, String legalEntity, String employeeStatus, String doj, int filterType,boolean ResetFilter) {
+public void AdvanceFilter(String country, String legalEntity, String employeeStatus, String doj, int filterType,boolean ResetFilter) throws ParseException {
 	// TODO Auto-generated method stub
 	Actions action = new Actions(driver);
 	if(filterType==0||filterType==1||filterType==2)
@@ -154,7 +157,7 @@ public void AdvanceFilter(String country, String legalEntity, String employeeSta
 	{
 		action.moveToElement(driver.findElement(AdvanceFilter)).perform();
 		driver.findElement(AdvanceFilter).click();
-		AdvanceFilterByDoj(doj);
+		AdvanceFilterByDoj(doj,driver.findElement(By.xpath("//div[.='Date of joining']//div//input")));
 		
 	}
 	if(ResetFilter==false)
@@ -226,10 +229,15 @@ public void AdvanceFilterByLegalEntity(String legalEntity)
 	driver.findElement(By.xpath("//div[.='Select Businessunit Name']//div[@class='ng-input']//input")).sendKeys(legalEntity);
 	driver.findElement(By.xpath("//span[.='"+legalEntity+"']//parent::div")).click();
 }
-public void AdvanceFilterByDoj(String Doj)
+public void AdvanceFilterByDoj(String Doj,WebElement DateField) throws ParseException
 {
-	driver.findElement(By.xpath("//div[.='Date of joining']//div//input")).click();
-	String date_MM_dd_yyyy[] = Doj.split("/");
+	SimpleDateFormat sdformat = new SimpleDateFormat("MM-dd-yyyy");
+	Date Fromdate = sdformat.parse(Doj);
+	String fromdate = sdformat.format(Fromdate);
+	System.out.println(fromdate);
+	DateField.click();
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//td[contains(@aria-label,'20')]//span")));
+	String date_MM_dd_yyyy[] = fromdate.split("-");
 	String months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 	WebElement midLink = driver.findElement(By.xpath("//button[@aria-label='Choose month and year']"));
 	midLink.click();
@@ -241,12 +249,14 @@ public void AdvanceFilterByDoj(String Doj)
 	WebElement RequiredMonth = driver.findElement(By.xpath(month));
 	wait.until(ExpectedConditions.elementToBeClickable(RequiredMonth));
 	RequiredMonth.click();
-	String RequiredDay = "//td[contains(@aria-label,'"+date_MM_dd_yyyy[1]+"')]//span";
+	sdformat = new SimpleDateFormat("MMMM dd, YYYY");
+    String day = sdformat.format(Fromdate);
+	String RequiredDay = "//td[@aria-label='"+day+"']//span[contains(text(),' " + date_MM_dd_yyyy[1] + " ')]";
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(RequiredDay)));
 	driver.findElement(By.xpath(RequiredDay)).click();
-    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(RequiredDay)));
-	Actions action = new Actions(driver);
-	action.sendKeys(Keys.ESCAPE).build().perform();
+ 
+	//Actions action = new Actions(driver);
+	//action.sendKeys(Keys.ESCAPE).build().perform();
 }
 public void AdvanceFilterByemployeeStatus(String employeeStatus)
 {

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="action_Requests.Approve_Reject_In_Approvals">
+      <class name="EHUB.GHR_ViewEmployee.Editandupdate_ViewEmployee_RemoveFileWithoutAttachment">
         <methods>
-          <include name="rejectRecordInViewScreen"/>
-          <include name="invokeBrowser"/>
+          <include name="editandupdateDocumentUpload"/>
         </methods>
-      </class> <!-- action_Requests.Approve_Reject_In_Approvals -->
+      </class> <!-- EHUB.GHR_ViewEmployee.Editandupdate_ViewEmployee_RemoveFileWithoutAttachment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
